@@ -1,0 +1,17 @@
+@import "./sass-defaults-main/index";
+
+@import "../components/common/common";
+@import "../components/pages/pages";
+@import "../components/utilities/utilities";
+
+:root {
+  --background-color: white;
+  --text-color: #{get-color("black")};
+  --header-color: #{get-color("blue")};
+}
+
+.dark {
+  --background-color: #{get-color("dark-1")};
+  --header-color: #{get-color("black")};
+  --text-color: white;
+}

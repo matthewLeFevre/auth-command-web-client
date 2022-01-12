@@ -1,0 +1,15 @@
+// v0.1.0
+
+@function set-text-color($color) {
+  @if lightness($color) > 55 {
+    // @return $black;
+    @return get-color("black");
+  } @else {
+    // @return $white;
+    @return #fff;
+  }
+}
+
+@function get-color($name) {
+  @return map-get($color-map, $name);
+}

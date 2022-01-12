@@ -1,0 +1,12 @@
+.page {
+  @include transition(all, 200ms);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+.page__content {
+  padding: $s-3;
+  max-width: 1200px;
+  margin: 0 auto;
+}

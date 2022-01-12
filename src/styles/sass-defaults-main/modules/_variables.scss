@@ -1,0 +1,96 @@
+// v0.2.0
+
+// 1. Color
+$color-map: (
+  "confirm-1": #084887,
+  "confirm-2": #396d9f,
+  "confirm-3": #6b91b7,
+  "confirm-4": #9cb6cf,
+  "success-1": #5bba6f,
+  "success-2": #7cc88c,
+  "success-3": #9dd6a9,
+  "success-4": #bde3c5,
+  "caution-1": #ffcc42,
+  "caution-2": #ffd668,
+  "caution-3": #ffe08e,
+  "caution-4": #ffebb3,
+  "warning-1": #b0413e,
+  "warning-2": #c06765,
+  "warning-3": #d08d8b,
+  "warning-4": #dfb3b2,
+  // brand colors
+  "blue": #255c99,
+  "black": #262626,
+  // Light theme
+  "grey-1": #d6d6d6,
+  "grey-2": #c2c2c2,
+  "grey-3": #adadad,
+  // Dark theme
+  "dark-1": #474747,
+  "dark-2": #3d3d3d,
+  "dark-3": #333,
+);
+
+// 2. Fonts
+$font-primary: sans-serif;
+
+// Font Size
+$txt-xs: 12px;
+$txt-sm: 14px;
+$txt-md: 16px;
+$txt-lg: 18px;
+$txt-xl: 24px;
+$txt-2x: 28px;
+$txt-3x: 32px;
+$txt-4x: 40px;
+
+// Font Size Responsive
+// https://tailwindcss.com/docs/font-size
+$txt-xs-r: 0.75rem;
+$txt-sm-r: 0.875rem;
+$txt-md-r: 1rem;
+$txt-lg-r: 1.125rem;
+$txt-xl-r: 1.25rem;
+$txt-2x-r: 1.5rem;
+$txt-3x-r: 1.875rem;
+$txt-4x-r: 2.25rem;
+
+// 3. Breakpoints (subject to change)
+
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2x: 1536px;
+
+// breakpoint map
+$break-points: (
+  "sm": $bp-sm,
+  "md": $bp-md,
+  "lg": $bp-lg,
+  "xl": $bp-xl,
+  "2x": $bp-2x,
+);
+
+// 4. Spacing (padding/margins)
+$s-1: 0.25rem;
+$s-2: 0.5rem;
+$s-3: 1rem;
+$s-4: 2rem;
+
+// 5. Z-index
+$z-0: -1;
+$z-1: 1;
+$z-5: 5;
+$z-6: 10;
+$z-7: 20;
+$z-8: 80;
+$z-9: 100;
+
+// 6. Box Shadow
+$bs-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$bs-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$bs-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+// 7. Border Radius
+$br-sm: 4px;

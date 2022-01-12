@@ -1,0 +1,117 @@
+// dashboard
+.app__list {
+  @include flex();
+  gap: $s-3;
+}
+
+.app {
+  width: calc(50% - $s-3);
+  max-width: calc(300px - $s-3 * 2);
+  height: 130px;
+  padding: $s-3;
+  box-shadow: $bs-1;
+  border-radius: $br-sm;
+  background-color: get-color("blue");
+  @include flex(column, nowrap, center, flex-start);
+  text-decoration: none;
+  color: white;
+}
+.dark .app {
+  background-color: get-color("black");
+}
+.app__btn {
+  @include transition;
+  @include flex(row, nowrap, center, center);
+  width: calc(50% - $s-3);
+  max-width: calc(300px - $s-3 * 2);
+  height: 130px;
+  padding: $s-3;
+  box-shadow: $bs-1;
+  border-radius: $br-sm;
+  background-color: lighten(get-color("blue"), 20%);
+  font-size: $txt-xl-r;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background-color: get-color("success-2");
+    box-shadow: $bs-2;
+  }
+}
+.dark .app__btn {
+  background-color: get-color("dark-2");
+  &:hover {
+    background-color: get-color("dark-3");
+  }
+}
+.app__name {
+  font-size: $txt-lg-r;
+  font-weight: bold;
+  cursor: pointer;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+.app__stats {
+  color: white;
+}
+.app__stat {
+  &.ONLINE {
+    font-size: $txt-xs-r;
+    width: fit-content;
+    background-color: white;
+    padding: $s-1 $s-2;
+    border-radius: $br-sm;
+    font-weight: bold;
+    color: yellowgreen;
+    display: block;
+    margin-top: $s-1;
+  }
+  &.OFFLINE {
+    font-size: $txt-xs-r;
+    width: fit-content;
+    background-color: white;
+    padding: $s-1 $s-2;
+    border-radius: $br-sm;
+    font-weight: bold;
+    color: rebeccapurple;
+    display: block;
+    margin-top: $s-1;
+  }
+  &.ARCHIVED {
+    font-weight: bold;
+    font-size: $txt-xs-r;
+    width: fit-content;
+    background-color: white;
+    padding: $s-1 $s-2;
+    border-radius: $br-sm;
+    font-weight: bold;
+    color: brown;
+    display: block;
+    margin-top: $s-1;
+  }
+}
+// details
+.app-details__key--hidden {
+  filter: blur(2.5px);
+}
+
+// login
+.login__page {
+  @include flex(row, nowrap, center, center);
+  height: 100vh;
+  background-color: get-color("blue");
+  color: white;
+}
+.login__prompt {
+  width: 400px;
+}
+.login__prompt__icon {
+  width: 50px;
+  margin-right: $s-3;
+}
+.login__prompt__title {
+  @include flex(row, nowrap, flex-start, center);
+  margin: $s-3 0;
+  font-size: $txt-4x-r;
+}

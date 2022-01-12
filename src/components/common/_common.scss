@@ -1,0 +1,130 @@
+// Button
+.btn {
+  border: none;
+  background-color: grey;
+  padding: $s-2 $s-3;
+  cursor: pointer;
+  border-radius: $br-sm;
+  box-shadow: $bs-1;
+  font-weight: bold;
+}
+@each $color, $value in $color-map {
+  .#{$color} {
+    background-color: $value;
+    color: set-text-color($value);
+    &:hover {
+      background-color: darken($value, 10%);
+    }
+  }
+  .#{$color}--inline {
+    background-color: $value;
+    color: set-text-color($value);
+    &:hover {
+      background-color: darken($value, 10%);
+    }
+    display: inline-block;
+    margin-right: $s-2;
+  }
+}
+// Form
+.form__input {
+  padding: $s-2 $s-3;
+  width: 100%;
+  box-shadow: $bs-1;
+  border-radius: $br-sm;
+  border: none;
+  background-color: #f5f5f5;
+  &:focus {
+    outline-color: get-color("success-1");
+  }
+}
+.dark .form__input {
+  background-color: #ebebeb;
+}
+.form__input__label {
+  display: block;
+  font-weight: bold;
+}
+// Header
+.header {
+  @include flex(row, nowrap, flex-start, center);
+  background-color: var(--header-color);
+  height: 60px;
+  box-shadow: $bs-1;
+  padding: 0 $s-4;
+}
+.header__icon {
+  @include flex(row, nowrap, center, center);
+  margin-right: auto;
+  font-size: $txt-2x-r;
+  font-weight: bold;
+  color: white;
+  img {
+    height: 30px;
+    margin-right: $s-3;
+  }
+}
+.header__link {
+  @include transition(background-color, 200ms);
+  font-weight: bold;
+  margin-right: $s-3;
+  padding: $s-1 $s-2;
+  border-radius: $br-sm;
+  text-decoration: none;
+  color: white;
+  @include flex(row, nowrap, center, center);
+  &:hover {
+    background-color: rgba(#fff, 0.3);
+    cursor: pointer;
+  }
+  img {
+    height: 30px;
+    margin-right: $s-3;
+  }
+}
+// Modal
+.modal {
+  min-width: 300px;
+  min-height: 100px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: $bs-2;
+}
+.dark .modal {
+  background-color: get-color("dark-1");
+}
+.modal__container {
+  background-color: rgba(get-color("black"), 0.5);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include flex(row, nowrap, center, center);
+}
+.modal__header {
+  padding: $s-2;
+  background-color: get-color("blue");
+  color: white;
+  font-weight: bold;
+  font-size: $txt-2x-r;
+  border-radius: $br-sm $br-sm 0 0;
+}
+.dark .modal__header {
+  padding: $s-2;
+  background-color: get-color("black");
+}
+.modal__body {
+  padding: $s-3;
+}
+.dark .modal__body {
+}
+.modal__footer {
+  padding: $s-2;
+  background-color: get-color("grey-1");
+  border-radius: 0 0 $br-sm $br-sm;
+}
+.dark .modal__footer {
+  background-color: get-color("dark-2");
+}
